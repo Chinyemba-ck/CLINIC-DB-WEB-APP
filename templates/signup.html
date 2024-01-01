@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{   url_for('static', filename='favicon.ico')    }}" >
+    
+    <title>Sign Up</title>
+</head>
+<body>
+    <div class="container">
+        <h2 id="login-title">UNZA CLINIC</h2>
+        <img src="{{ url_for('static', filename='images/unza.png') }}" id="login-img">
+        <div class="input">
+            <input type="text" id="new-username" name="new-username"  placeholder="Username" required autofocus autocomplete="off">
+            <input type="email" id="new-email" name="new-email"  placeholder="Email" required autofocus autocomplete="off">
+            <input type="password" id="new-password" name="new-password"  placeholder="Password" required autofocus autocomplete="off">
+            <input type="password" id="repeat-password" name="repeat-password"  placeholder="Repeat Password" required autofocus autocomplete="off">
+            <button type="submit" id="sign-up-btn">Sign Up</button>
+            <p class="sign-in">Already have an account? <a href="{{ url_for('index') }}" class="sign-in">Log In</a></p>
+            <span class="or-text">Or</span>
+            <div>
+                <a href="#" id="sign-up-Google">
+                    <img src="{{ url_for('static', filename='images/google-logo.png') }}" alt="Google Logo" class="google-logo">
+                    Sign Up with Google
+                </a>                
+            </div>
+        </div>    
+    </div>
+    <script src="{{ url_for('static', filename='signup.js') }}" type="module"></script>
+</body>
+</html>

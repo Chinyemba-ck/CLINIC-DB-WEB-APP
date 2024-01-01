@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Patients</title>
+        <!-- Include any CSS styling here -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='add-tables.css') }}">
+        <link rel="icon" href="{{   url_for('static', filename='images/favicon.ico')    }}" >
+</head>
+<body>
+    <h1>Edit Patient</h1>
+    <form >
+        <label for="patient_id">Patient ID:</label>
+        <input type="text" id="patient_id" name="patient_id" required>
+        <br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="initials">Initials:</label>
+        <input type="text" id="initials" name="initials">
+        <br>
+        <label for="sex">Sex:</label>
+        <input type="text" id="sex" name="sex" required>
+        <br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address">
+        <br>
+        <label for="post_code">Post Code:</label>
+        <input type="text" id="post_code" name="post_code">
+        <br>
+        <label for="admission">Admission Date:</label>
+        <input type="date" id="admission" name="admission">
+        <br>
+        <label for="DOB">Date of Birth:</label>
+        <input type="date" id="DOB" name="DOB" required>
+        <br>
+        <label for="ward_id">Ward ID:</label>
+        <input type="text" id="ward_id" name="ward_id">
+        <br>
+        <label for="next_of_kin">Next of Kin:</label>
+        <input type="text" id="next_of_kin" name="next_of_kin">
+        <br>
+        <input type="submit" value="Edit Patient">
+    </form>
+</body>
+</html>

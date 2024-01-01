@@ -1,0 +1,135 @@
+/* Reset default styles for the entire page */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Updated background color for the body */
+    font-family: Arial, sans-serif;
+}
+
+/* Style for the fixed navigation bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1dde2a; /* Updated green color for the navbar */
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Style for the logo in the navbar */
+.navbar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+/* Style for user information in the navbar */
+.navbar-user-info {
+    display: flex;
+    align-items: center;
+    margin-right: 60px;
+}
+
+/* Style for user information text */
+.navbar-user-info div {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Style for the navigation links in the navbar */
+.navbar-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Style for individual navigation links */
+.navbar-links li {
+    margin-right: 10px;
+}
+
+/* Style for the navigation links' anchor tags */
+.navbar-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Style for the content area */
+.content {
+    margin-top: 60px;
+    padding: 20px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* Style for the "View" button */
+.view-button {
+    background-color: #1dde2a; /* Set the background color to the green color */
+    color: #fff; /* Set text color to white */
+    padding: 10px 20px; /* Adjust padding as needed */
+    border: none; /* Remove the border */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition on hover */
+}
+
+/* Hover effect for the "View" button */
+.view-button:hover {
+    background-color: #19c928; /* Change the background color on hover (a slightly darker shade of green) */
+}
+
+/* Additional styles specific to this page */
+.select-table-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.select-table-text {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.select-table-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.select-table-label {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.select-table-radio {
+    margin-right: 10px;
+}
+
+.radio-buttons-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #1dde2a;
+    color: #fff;
+    text-align: center;
+    padding: 1px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-text {
+    font-size: 18px;
+}

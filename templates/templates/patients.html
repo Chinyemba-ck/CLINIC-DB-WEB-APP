@@ -1,0 +1,110 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Select Table</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='tables.css') }}">
+    
+</head>
+<body>
+    <h1>Select a Table to View</h1>
+    <form method="POST" id="table-form">
+        <label for="patients">Patients:</label>
+        <input type="radio" id="patients" name="table" value="patients" onclick="showTable('patients')" >
+        <br>
+        <label for="ward">Ward:</label>
+        <input type="radio" id="ward" name="table" value="ward" onclick="showTable('ward')">        
+    </form>
+
+    <!-- Container for buttons and table -->
+    <div class="table-container">
+        <!-- Button container -->
+        <div class="button-container">
+            <button class="add" id="addBtn">Add</button>
+        </div>
+
+        <!-- Container for patients' table content -->
+        <div id="patients-table">
+            <!-- Placeholder for patients' table content -->
+            <body>
+                <h1>Patient List</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Patient ID</th>
+                            <th>Name</th>
+                            <th>Sex</th>
+                            <th>Address</th>
+                            <th>Post Code</th>
+                            <th>Admission Date</th>
+                            <th>Date of Birth</th>
+                            <th>Ward ID</th>
+                            <th>Next of Kin</th>
+                            <th></th> <!-- Action header cell -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for patient in patients %}
+                        <tr>
+                                <td>{{ patient.patient_id }}</td>
+                                <td>{{ patient.name }}</td>
+                                <td>{{ patient.sex }}</td>
+                                <td>{{ patient.address }}</td>
+                                <td>{{ patient.post_code }}</td>
+                                <td>{{ patient.admission }}</td>
+                                <td>{{ patient.DOB }}</td>
+                                <td>{{ patient.ward_id }}</td>
+                                <td>{{ patient.next_of_kin }}</td>
+                                <td>
+                                    <button class="edit-button" data-patient-id="{{ patient.patient_id }}">Edit</button>
+                                    <form action="{{ url_for('delete_patient', patient_id=patient.patient_id) }}" method="post">
+                                        <button type="submit" class="delete-button">Delete</button>
+                                    </form>
+                                </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+        </div>
+
+        <!-- Container for ward table content -->
+        <div id="ward-table">
+            <!-- Placeholder for ward table content -->
+            <h1>Ward Table</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ward ID</th>
+                        <th>Ward Name</th>
+                        <th>Number of Beds</th>
+                        <th>Nurse in Charge</th>
+                        <th>Ward Type</th>
+                        <th>Action</th> <!-- Action header cell -->
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for ward in wards %}
+                        <tr>
+                            <td>{{ ward.ward_id }}</td>
+                            <td>{{ ward.ward_name }}</td>
+                            <td>{{ ward.number_beds }}</td>
+                            <td>{{ ward.nurse_in_charge }}</td>
+                            <td>{{ ward.ward_type }}</td>
+                            <td>
+                                <button class="edit-button" data-ward-id="{{ ward.ward_id }}">Edit</button>
+                                <button class="delete-button" data-ward-id="{{ ward.ward_id }}">Delete</button>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='selectTable.js') }}" ></script>
+    
+</body>
+</html> -->
+
+
+
+
+

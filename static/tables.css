@@ -1,0 +1,143 @@
+/* Reset some default styles and set a base font */
+body {
+    font-family: Arial, sans-serif;
+    user-select: none;
+    background-color: #f9f9f9; /* Set the background color to a light gray */
+}
+
+/* Styles for the "Add" button */
+.button-container {
+    display: flex; /* Use flexbox to horizontally center the button */
+    justify-content: start; /* Align the button to the start (left) within the container */
+    margin: 20px 0; /* Add margin at the top and bottom of the button container */
+}
+
+/* Styles for the "Add" anchor tag */
+.button-container a.add-button {
+    background-color: #5bc0de; /* Blue color for Add button */
+    color: white;
+    padding: 10px 20px; /* Add padding to the button (adjust values as needed) */
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    text-decoration: none; /* Remove underline for anchor */
+    display: inline-block; /* Display as inline-block to match button behavior */
+    transition: background-color 0.3s; /* Add transition for smooth color change */
+}
+
+.button-container a.ai-button {
+    background-color: #5bc0de; /* Blue color for Add button */
+    color: white;
+    padding: 10px 20px; /* Add padding to the button (adjust values as needed) */
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    text-decoration: none; /* Remove underline for anchor */
+    display: inline-block; /* Display as inline-block to match button behavior */
+    transition: background-color 0.3s; /* Add transition for smooth color change */
+    margin-left: 1080px;
+}
+
+.button-container a.home-button {
+    background-color: #5bc0de; /* Blue color for Add button */
+    color: white;
+    padding: 10px 20px; /* Add padding to the button (adjust values as needed) */
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    text-decoration: none; /* Remove underline for anchor */
+    display: inline-block; /* Display as inline-block to match button behavior */
+    transition: background-color 0.3s; /* Add transition for smooth color change */
+    margin-left: auto;
+}
+
+/* Hover styles for the "Add" anchor tag */
+.button-container a.add-button:hover {
+    background-color: #0056b3; /* Slightly darker blue on hover */ 
+}
+
+/* Styles for the "Edit" anchor tag */
+a.edit-button {
+    background-color: #5bc0de; /* Blue color for Edit button */
+    color: white;
+    padding: 6px 22px; /* Add padding to the button (adjust values as needed) */
+    border: none;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    text-decoration: none; /* Remove underline for anchor */
+    display: inline-block; /* Display as inline-block to match button behavior */
+    transition: background-color 0.3s; /* Add transition for smooth color change */
+}
+
+/* Hover styles for the "Edit" anchor tag */
+a.edit-button:hover {
+    background-color: #0056b3; /* Slightly darker blue on hover */
+}
+
+
+
+/* Delete button style */
+button.delete-button {
+    background-color: #dc3545; /* Red color for Delete button */
+    color: white;
+    transition: background-color 0.3s; /* Add transition for smooth color change */
+    border: none; /* Remove the button border */
+    padding: 8px 16px; /* Add padding to the button (adjust values as needed) */
+    border-radius: 4px; /* Add border radius for a rounded look (adjust values as needed) */
+}
+
+/* Hover styles for buttons */
+.button-container button.add:hover {
+    background-color: #0056b3; /* Slightly darker blue on hover */ 
+}
+
+/* Hover styles for Edit button */
+button.edit-button:hover {
+    background-color: #0056b3; /* Slightly darker blue on hover */
+}
+
+/* Hover styles for Delete button */
+button.delete-button:hover {
+    background-color: #b30000; /* Slightly darker red on hover */
+}
+
+/* Styles for table container */
+.table-container {
+    position: relative;
+}
+
+/* Common styles for tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto; /* Center the table horizontally */
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2; /* Light gray background for table headers */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Alternate row background color */
+}
+
+tr:hover {
+    background-color: #ddd; /* Darker gray background on hover */
+}
+
+/* Style for the buttons in the Action column */
+td button {
+    display: inline-block; /* Display buttons inline */
+    margin-right: 5px; /* Add some spacing between buttons */
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Ward</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='add-tables.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+</head>
+<body>
+    <h1>Edit Ward</h1>
+    <form method="POST" action="{{ url_for('update_ward', ward_id=ward.ward_id) }}">
+        <label for="ward_id">Ward ID:</label>
+        <input type="text" id="ward_id" name="ward_id" value="{{ ward.ward_id }}" required>
+        <br>
+        <label for="ward_name">Ward Name:</label>
+        <input type="text" id="ward_name" name="ward_name" value="{{ ward.ward_name }}" required>
+        <br>
+        <label for="number_beds">Number of Beds:</label>
+        <input type="number" id="number_beds" name="number_beds" value="{{ ward.number_beds }}" required>
+        <br>
+        <label for="nurse_in_charge">Nurse in Charge:</label>
+        <input type="text" id="nurse_in_charge" name="nurse_in_charge" value="{{ ward.nurse_in_charge }}" required>
+        <br>
+        <label for="ward_type">Ward Type:</label>
+        <input type="text" id="ward_type" name="ward_type" value="{{ ward.ward_type }}">
+        <br>
+        <input type="submit" value="Edit Ward">
+    </form>
+</body>
+</html>

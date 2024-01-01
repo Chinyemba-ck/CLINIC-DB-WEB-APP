@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include your custom CSS file -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dashboard.css') }}">
+    <!-- Include the Roboto font from Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap">
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Set the favicon for the website -->
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <title>Dashboard</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <ul class="navbar-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <!-- User Information in Navbar -->
+        <div class="navbar-user-info">
+            <img src="{{ user_data.photoURL }}" alt="User Photo">
+            <div>{{ user_data.email }}</div>
+        </div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <h2>Welcome {{ user_data.displayName }}</h2>
+        <!-- Table Selection Container -->
+        <div class="select-table-container">
+            <p class="select-table-text">Please Select A Table</p>
+            <!-- Form for Table Selection -->
+            <form action="/select_table" method="post" class="select-table-form">
+                <div class="radio-buttons-container">
+                    <!-- Radio Button for Patients -->
+                    <label class="select-table-label">
+                        <input type="radio" id="patients" name="table" value="patients" class="select-table-radio" required>
+                        <i class="fas fa-user"></i> Patients
+                    </label>
+                    <!-- Radio Button for Wards -->
+                    <label class="select-table-label">
+                        <input type="radio" id="wards" name="table" value="wards" class="select-table-radio">
+                        <i class="fas fa-hospital"></i> Wards
+                    </label>
+                </div>
+                <!-- View Button to Submit the Form -->
+                <input type="submit" class="view-button" value="View">
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <!-- Display the current year dynamically -->
+        <p class="footer-text">&copy;UNZA {{ current_year }}</p>
+    </div>
+</body>
+</html>

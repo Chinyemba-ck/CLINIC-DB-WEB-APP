@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{   url_for('static', filename='images/favicon.ico')    }}" >
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <h2 id="login-title">UNZA CLINIC</h2>
+        <img src="{{ url_for('static', filename='images/unza.png') }}" id="login-img">
+        <div class="input">
+            <input type="email" id="email" name="email"  placeholder="Email"   required autofocus autocomplete="off">
+            <input type="password" id="password" name="password"  placeholder="password"   required autofocus autocomplete="off">
+            <a href="#" id="forgot-password"><p>forgot password?</p></a>
+            <button id="log-in-btn">Log In</button> 
+            <p class="sign-in">Don't have an account?  <a href="#" class="sign-in">Sign Up</a></p>
+            <span class="or-text">Or</span>
+            <div>
+                <a href="#" id="sign-in-Google">
+                    <img src="{{ url_for('static', filename='images/google-logo.png') }}" alt="Google Logo" class="google-logo">
+                    Login In with Google
+                </a>
+            </div>
+        </div>    
+    </div>
+    <script src="{{ url_for('static', filename='login.js') }}" type="module"></script>
+ 
+</body>
+</html>
