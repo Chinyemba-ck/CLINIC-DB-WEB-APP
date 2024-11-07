@@ -93,7 +93,6 @@ def select_table():
         # Redirect to the wards route if 'Wards' is selected
         return redirect(url_for('wards'))
     else:
-        # Handle invalid selection here, e.g., show an error message or stay on the dashboard
         return render_template('dashboard.html', user_data=session.get('user_data', None), current_year=datetime.now().year)
 
 
@@ -126,8 +125,6 @@ def add_ward():
         nurse_in_charge = request.form['nurse_in_charge']
         ward_type = request.form['ward_type']
 
-        # Insert the data into the database (Assuming you have a database set up)
-        # You should replace this with your actual database insert logic.
         # Example using SQLAlchemy:
         new_ward = Ward(ward_id=ward_id, ward_name=ward_name, number_beds=number_beds, nurse_in_charge=nurse_in_charge, ward_type=ward_type)
         db.session.add(new_ward)
@@ -196,9 +193,6 @@ def add_patient():
         ward_id = request.form['ward_id']
         next_of_kin = request.form['next_of_kin']
 
-        # Insert the patient data into the database (Assuming you have a database set up)
-        # You should replace this with your actual database insert logic.
-        # Example using SQLAlchemy:
         new_patient = Patient(patient_id=patient_id, name=name, initials=initials, sex=sex, address=address, post_code=post_code, admission=admission_date, DOB=date_of_birth, ward_id=ward_id, next_of_kin=next_of_kin)
         db.session.add(new_patient)
         db.session.commit()
@@ -230,7 +224,6 @@ def update_patient(patient_id):
     if request.method == 'POST':
         # Retrieve the edited patient data from the form
         name = request.form.get('name')
-        # Add code to retrieve and update other patient attributes
 
         # Retrieve the patient from the database
         patient = Patient.query.filter_by(patient_id=patient_id).first()
